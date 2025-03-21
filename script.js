@@ -1,6 +1,3 @@
-// Check JS is Connected
-console.log('JS Connected');
-
 function toggleSubMenu(id) {
   const submenu = document.getElementById(id);
   if (submenu) {
@@ -126,4 +123,21 @@ modalTriggers.forEach(trigger => {
     modalImage.src = event.target.src;
     modalDescription.textContent = event.target.getAttribute("data-description");
   });
+});
+
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth' // Smooth scrolling effect
+  });
+}
+
+// Show the "Back to Top" button when scrolling down
+const backToTopButton = document.getElementById('backToTop');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) { // Show button after scrolling 300px
+    backToTopButton.style.display = 'block';
+  } else {
+    backToTopButton.style.display = 'none';
+  }
 });
