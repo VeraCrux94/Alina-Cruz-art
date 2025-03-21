@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
+  <script src="script.js"></script>
+  <title>Alina Cruz Portfolio</title>
+</head>
+<body>
+  <nav>
+    <ul class="navbar" id="navbar">
+      <li><a href="index.html"><p>Alina Cruz</p></a></li>
+      <li><a href="#contact.html"><p>Contact</p></a></li>
+    </ul>
+  </nav>
+
+  <div class="sidebar">
+    <ul class="menu">
+       <span class="hamburger" onclick="toggleSidebar(hamburger)">&#9776;</span>
+    <li class="menu-item" >
+     
+    
+      </li>
+       
+      <li class="menu-item">
+        <span class="menu-title" onclick="toggleSubMenu('work')">WORK</span>
+        <ul class="submenu" id="work">
+        
+            <li class="submenu-item">
+            <span class="menu-title" onclick="toggleSubMenu('sculpture')">Sculpture</span>
+            <ul class="submenu" id="sculpture">
+
+              <li><a href="S001_Looking_Glass.png" target="_blank">Looking Glass, 2024</a></li>
+              <li><a href="S002_Davina.png" target="_blank">Davina, 2024</a></li>
+               <li><a href="S003_tree_of_life 01.png" target="_blank">Tree of Life, 2024</a></li>
+               <li><a href="S005_HODS-Con._AVERA-1Left.jpeg" target="_blank">Here Our Democracy Stands, 2025</a></li>
+               <li><a href="S006-Escape-02.png" target="_blank">Escape, 2025</a></li>
+              
+            </ul>
+
+           
+          </li>
+          <li class="submenu-item">
+            <span class="menu-title" onclick="toggleSubMenu('digital')">
+              <a href="digital.html">Digital</a>
+            </span>
+            
+          </li>
+           <li class="submenu-item">
+            <span class="menu-title" onclick="toggleSubMenu('painting')">
+              <a href="painting.html">Painting</a>
+            </span>
+            </li>
+          
+          
+          </li>
+          <li class="submenu-item">
+            <span class="menu-title" onclick="toggleSubMenu('live-performance')">
+              <a href="live_performance.html">Live Performance</a>
+            </span>
+
+            
+          </li>
+
+         <!--  <li class="submenu-item">
+            <span class="menu-title" onclick="toggleSubMenu('artist_in_action')">
+              <a href="artist_in_action.html">Artist in Action</a>
+            </span>
+            
+            
+          </li> -->
+          
+        
+          </ul>
+          </li>
+      
+        </ul>
+          
+        </li>
+      
+          
+  
+      <!-- <li class="menu-item">
+        <span class="menu-title" onclick="toggleSubMenu('news')"><a href="news.html" target="_blank">News</a></span>
+        <ul class="submenu" id="news"></ul>
+      </li> -->
+      <li class="menu-item">
+        <span class="menu-title" onclick="toggleSubMenu('about')"><a href="about.html" target="_blank">About</a></span>
+        <ul class="submenu" id="about"></ul>
+      </li>
+   
+    </ul>
+ 
+  </div> 
+
+
+
+
+   <title>Responsive Image Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body> 
+  <div class="page-header">
+   
+    <h2>Sculpture</h2>
+    <h3>Paper Clay, Wire, Wood</h3>
+   
+    <div class="container">
+      
+    <br>
+    <div class="gallery">
+        <div class="image-grid">
+           
+            <div class="image-item">
+              <img class="gallery-image" src="S001_Looking_Glass.png" alt="glasses made of a single wire" class="gallery-image" data-description="Description for Image 2" style="width: 200px; cursor: pointer;">
+              <p class="image-description">Looking Glass, Wire, 2024</p>
+          </div>
+            <div class="image-item">
+                <img class="gallery-image" src="S002_Davina.png" alt="Davina female form" class="gallery-image" data-description="Description for Image 2" style="width: 200px; cursor: pointer;">
+                <p class="image-description">Davina, Paper Clay, 2024</p>
+            </div>
+            <div class="image-item">
+                <img class="gallery-image" src="S003_tree_of_life 01.png" alt="Tree made of wire" class="gallery-image" data-description="Description for Image 2" style="width: 200px; cursor: pointer;">
+                <p class="image-description">Tree of Life, Wire Paper Clay, 2024 </p>
+            </div>
+            <div class="image-item">
+                <img class="gallery-image" src="S005_HODS-Com._1R.jpeg" alt="Throne-like chair sitting broken apart" class="gallery-image" data-description="Description for Image 2" style="width: 200px; cursor: pointer;">
+                <p class="image-description">Here Our Democracy Stands, Wood, 2025</p>
+            </div>
+            <div class="image-item">
+                <img class="gallery-image" src="S006-Escape-03.png" alt="bench, seat for two painted vines" class="gallery-image" data-description="Description for Image 2" style="width: 200px; cursor: pointer;">
+                <p class="image-description">Escape, Wood, 2025</p>
+            </div>
+            
+            <!-- Add more images as needed -->
+        </div>
+    </div>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+          <span id="closeBtn" class="close">&times;</span>
+    </div>
+ </div>
+
+    <!-- Modal for Image Viewing -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <div class="modal-content">
+            <img id="modalImage" class="modal-image" src="" alt="Expanded View">
+            <p id="modalDescription" class="modal-description"></p>
+            <div class="modal-nav">
+                <button id="prevBtn" class="nav-btn">Prev</button>
+                <button id="nextBtn" class="nav-btn">Next</button>
+            </div>
+        </div>
+    </div>
+ 
+    <script src="scripts.js"></script>
+</body>
+   
+  </div>
+
+<div id="myModal" class="modal">
+              <div class="modal-content">
+                  <span id="closeBtn" class="close">&times;</span>
+                 
+              </div>
+          </div>
+          
+<!-- Back to Top Button -->
+<button id="backToTop" class="back-to-top" onclick="scrollToTop()">Back to Top</button>
+
+<footer>
+   <!-- <div class="left" id="footer">
+    <a href="#">Privacy</a>
+    <a href="#">Terms</a>
+      </div> -->
+    
+    
+    <div class="center" id="footer"><section class="#link_up" >
+       <a class="main-section" id="link_up">
+      <a href="contact.html"><p>Contact</p></a>
+          </div>
+     
+      <br></br>
+  <div class="right" id="footer">
+    <p>&copy; 2025</p>
+   
+  </div>  
+  
+</footer>
+
+
+
+</body>
+
+</html>
