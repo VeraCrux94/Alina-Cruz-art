@@ -1,27 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="style.css">
-
-    <!-- Scripts -->
-    <script src="script.js" defer></script>
-    
-    <title>Web Starter</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
+  <script src="script.js"></script>
+  <title>Alina Cruz Portfolio</title>
 </head>
 <body>
-    
-    <h1>Web Starter</h1>
+  <nav>
+    <ul class="navbar" id="navbar">
+      <li><a href="#about.html"><p>Portfolio</p></a></li>
+      <li><a href="#contact.html"><p>Contact</p></a></li>
+    </ul>
+  </nav>
 
+
+
+   <ul class="dropDown"> 
+  <div class="sidebar">
+    <ul class="menu">
+     <span class="hamburger" onclick="toggleSidebar()">&#9776; </span>
+    
+  <!--      <li class="menu"> -->
+             
+
+         
+      <li class="menu-item">
+       
+        <span class="menu-title" onclick="toggleSubMenu('work')">WORK</span>
+        <ul class="submenu" id="work">
+          <li class="submenu-item">
+            <span class="menu-title" onclick="toggleSubMenu('painting')">
+              <a href="painting.html">Painting</a></span>
+
+
+             
+
+           
+          </li>
+          <li class="submenu-item">
+            <span class="menu-title" onclick="toggleSubMenu('digital')">
+              <a href="digital.html">Digital</a>
+            </span>
+            
+          </li>
+           <li class="submenu-item">
+            <span class="menu-title" onclick="toggleSubMenu('sculpture')">
+              <a href="sculpture.html">Sculpture</a>
+            </span>
+            </li>
+          
+          
+          </li>
+          <li class="submenu-item">
+            <span class="menu-title" onclick="toggleSubMenu('live-performance')">
+              <a href="live_performance">Live Performance</a>
+            </span>
+            
+          </li>
+          
+        
+          </ul>
+          </li>
+      
+        </ul>
+                 </li>
+         
+  
+    <li class="menu-item">
+        <span class="menu-title" onclick="toggleSubMenu('news')"><a href="https://example.com/project1" target="_blank">News</a></span>
+        <ul class="submenu" id="news"></ul>
+          </li><!---hide later no news as of 3-18-25---->
+   <li class="menu-item">
+        <span class="menu-title" onclick="toggleSubMenu('about')"><a href="about.html" target="_blank">About</a></span>
+        <ul class="submenu" id="about"></ul>
+         </li>
+    </ul>
+  </ul>
+  </div>
+
+
+
+  <div class="hero">
+    <h1>Alina Cruz</h1>
+    <h3>Multidisciplinary Artist</h3>
+    <div class="slideshow-container">
+     
+       
+      <div class="slide fade">
+        <img src="P002_Still_Life_color.png" alt="Chromatic still life" class="slide">
+        <div class="caption">Still Life- Chromatic</div>
+      </div>
+      <div class="slide fade">
+        <img src="S003_tree_of_life 01.png" alt="Tree made of wires and plaster" class="slide">
+        <div class="caption">Tree of Life</div>
+      </div>
+      <div class="slide fade">
+        <img src="C001_The_Art_of_Distraction.png" alt="Print of a hand reaching for a cube" class="slide">
+        <div class="caption">The Art of Distraction</div>
+      </div>
+      
+      <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+      <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    </div>
+    <script src="script.js"></script>
+</div>
+  
+</div>
+  
+  
+
+
+
+<footer>
+   <!-- <div class="left" id="footer">
+    <a href="#">Privacy</a>
+    <a href="#">Terms</a>
+      </div> -->
+    
+    
+    <div class="center" id="footer"><section class="#link_up" >
+       <a class="main-section" id="link_up">
+      <p>Contact</p>
+          </div>
+     
+      <brk></brk>
+  <div class="right" id="footer">
+    <p>&copy; 2025</p>
+   
+  </div>  
+  
+</footer>
 </body>
+
 </html>
