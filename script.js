@@ -66,32 +66,23 @@ window.addEventListener('click', (e) => {
   }
 });
 
-let slideIndex = 0;
+let slideIndex = 0; // Start with the first slide (index 0)
 
 function showSlides() {
-  let slides = document.getElementsByClassName("slide");
+  const slides = document.getElementsByClassName("slide");
   for (let i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
+    slides[i].style.display = "none"; // Hide all slides
   }
   slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
-  slides[slideIndex-1].style.display = "block";  
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
-}
-
-function changeSlide(n) {
-  let slides = document.getElementsByClassName("slide");
-  slideIndex += n;
-  if (slideIndex > slides.length) {slideIndex = 1}    
-  if (slideIndex < 1) {slideIndex = slides.length}
-  for (let i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
+  if (slideIndex > slides.length) {
+    slideIndex = 1; // Loop back to the first slide
   }
-  slides[slideIndex-1].style.display = "block";
+  slides[slideIndex - 1].style.display = "block"; // Show the current slide
 }
 
-window.onload = function() {
-  showSlides();
+window.onload = function () {
+  showSlides(); // Show the first slide
+  setInterval(showSlides, 2000); // Automatically cycle through slides every 2 seconds
 };
 
 document.querySelectorAll('.gallery-image').forEach(image => {
