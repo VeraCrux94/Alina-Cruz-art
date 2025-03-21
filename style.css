@@ -311,7 +311,7 @@ box-sizing: border-box;
 
 .slideshow-container {
   position: relative;
-  width: 100%;
+  width: 80%;
   max-width: 800px; /* Adjust as needed */
   height: auto;
   margin: auto;
