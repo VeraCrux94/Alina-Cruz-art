@@ -22,26 +22,22 @@
 
 
 
-   <ul class="dropDown"> 
   <div class="sidebar">
     <ul class="menu">
-     <span class="hamburger" onclick="toggleSidebar()">&#9776; </span>
+       <span class="hamburger" onclick="toggleSidebar(hamburger)">&#9776;</span>
+    <li class="menu-item" >
+     
     
-  <!--      <li class="menu"> -->
-             
-
-         
-      <li class="menu-item">
+      </li>
        
+      <li class="menu-item">
         <span class="menu-title" onclick="toggleSubMenu('work')">WORK</span>
         <ul class="submenu" id="work">
           <li class="submenu-item">
+            
             <span class="menu-title" onclick="toggleSubMenu('painting')">
-              <a href="painting.html">Painting</a></span>
-
-
-             
-
+              <a href="painting.html">Painting</a>
+            </span>
            
           </li>
           <li class="submenu-item">
@@ -60,7 +56,7 @@
           </li>
           <li class="submenu-item">
             <span class="menu-title" onclick="toggleSubMenu('live-performance')">
-              <a href="live_performance">Live Performance</a>
+              <a href="live_performance.html">Live Performance</a>
             </span>
             
           </li>
@@ -91,21 +87,18 @@
     <h1>Alina Cruz</h1>
     <h3>Multidisciplinary Artist</h3>
     <div class="slideshow-container">
-     
-       
       <div class="slide fade">
-        <img src="P002_Still_Life_color.png" alt="Chromatic still life" class="slide">
-        <div class="caption">Still Life- Chromatic</div>
+        <img src="P002_Still_Life_color.png" alt="Chromatic still life">
+        <div class="caption">Still Life - Chromatic</div>
       </div>
       <div class="slide fade">
-        <img src="S003_tree_of_life 01.png" alt="Tree made of wires and plaster" class="slide">
+        <img src="S003_tree_of_life 01.png" alt="Tree made of wires and plaster">
         <div class="caption">Tree of Life</div>
       </div>
       <div class="slide fade">
-        <img src="C001_The_Art_of_Distraction.png" alt="Print of a hand reaching for a cube" class="slide">
+        <img src="C001_The_Art_of_Distraction.png" alt="Print of a hand reaching for a cube">
         <div class="caption">The Art of Distraction</div>
       </div>
-      
       <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
       <a class="next" onclick="changeSlide(1)">&#10095;</a>
     </div>
