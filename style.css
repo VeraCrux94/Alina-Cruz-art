@@ -484,16 +484,17 @@ h2 {
 }
 
 .gallery-image {
-  width: 100%;
-  height: auto;
+  width: 200px; /* Set a consistent width */
+  height: 200px; /* Set a consistent height */
+  object-fit: cover; /* Ensure the image scales properly without distortion */
   cursor: pointer;
-  transition: transform 0.3s ease;
-   padding-top: 1em;
+  transition: transform 0.3s ease; /* Smooth scaling on hover */
+  padding-top: 1em;
   margin-top: 1em;
 }
 
 .gallery-image:hover {
-  transform: scale(1.75); /* Increase scale for hover effect */
+  transform: scale(1.75); /* Ensure hover effect works */
   transition: transform 0.3s ease; /* Smooth transition */
 }
 
@@ -798,4 +799,24 @@ text-align: right;
   .hamburger {
     display: none; 
   }
+}
+
+.back-to-top {
+  position: fixed;
+   bottom: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  font-size: 14px;
+  background-color: #f7f2f2;
+  color: #000000;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  /*display: none;  Initially hidden */
+  z-index: 1000;
+}
+
+.back-to-top:hover {
+  background-color: #3b3b3b;
+  color: whitesmoke;
 }
