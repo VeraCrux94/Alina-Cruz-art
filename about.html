@@ -32,32 +32,23 @@
         <span class="menu-title" onclick="toggleSubMenu('work')">WORK</span>
         <ul class="submenu" id="work">
           <li class="submenu-item">
-            <span class="menu-title" onclick="toggleSubMenu('painting')">Painting</span>
-            <ul class="submenu" id="painting">
-
-              <li><a href="P001_Still_life_mono.png" target="_blank">Still Life- Mono, 2024</a></li>
-              <li><a href="P002_Still_Life_color.png" target="_blank">Still Life- Chrom, 2024</a></li>
-               <li><a href="P004_Davina.png" target="_blank">Davina- Cubism, 2024</a></li>
-               <li><a href="P005_Blood_Money.png" target="_blank">Blood Money, 2024</a></li>
-               <li><a href="P006_Self_Portrait_mono.png" target="_blank">Self Portrait- Mono, 2025</a></li>
-               <li><a href="P007_Selt_Portrait-color.png" target="_blank">Self Portrait- Chrom, 2025</a></li>
-               <li><a href="P008_Monat_Horsewoman.png" target="_blank">Horsewoman- Monat, 2025</a></li>
-            </ul>
-
+            <span class="menu-title" onclick="toggleSubMenu('painting')">
+                <a href="painting.html">Painting</a>
+            </span>
+           </li> 
            
           </li>
-
-          <li class="submenu-item">
-            <span class="menu-title" onclick="toggleSubMenu('printmaking')">
-              <a href="printmaking.html">Printmaking</a>
-            </span>
-          </li>
-          
           <li class="submenu-item">
             <span class="menu-title" onclick="toggleSubMenu('digital')">
               <a href="digital.html">Digital</a>
             </span>
-            
+
+            <li class="submenu-item">
+                <span class="menu-title" onclick="toggleSubMenu('printmaking')">
+                  <a href="printmaking.html">Printmaking</a>
+                </span>
+              </li>
+
           </li>
            <li class="submenu-item">
             <span class="menu-title" onclick="toggleSubMenu('sculpture')">
@@ -108,58 +99,111 @@
 
 
 
-  
+
+
+
 <body> 
   <div class="page-header">
    
-    <h2>Painting</h2>
-    <h3>Oil, Acrylic, Watercolors</h3>
+    <h2>About </h2>
+    <!-- <h3>the artist</h3> -->
    
     <div class="container">
       
     <br>
     <div class="gallery">
         <div class="image-grid">
-           
+        <h2>Artist Statement</h2>
             <div class="image-item">
-              <img class="gallery-image" src="P001_Still_life_mono.png" alt="monochromatic self portrait" class="gallery-image" data-description="Description for Image 2" style="width: 200px; cursor: pointer;">
-              <p class="image-description">Monochromatic- Still Life, Oil Painting, 16" x 20", 2024</p>
-          </div>
-            <div class="image-item">
-                <img class="gallery-image" src="P002_Still_Life_color.png" alt="Chromatic of a still life" class="gallery-image" data-description="Description for Image 2" style="width: 200px; cursor: pointer;">
-                <p class="image-description">Chromatic- Still Life, Oil Painting, 16" x 20", 2024</p>
+                <div class="text-main">
+                <p> As a first-generation Mexican American artist, my work is deeply rooted in themes of social justice, political activism, and the power of art to challenge societal norms. Though I’ve always been passionate about art, it wasn’t until my 30s that I fully reconnected with my creative practice. I immerse myself in a variety of mediums, with a focus on oil painting and sculpture, to create pieces that serve as emotional expression and social commentary.</p>
+                    <br>
+                  <p> My art is my rebellion—a form of defiance against authority and systems that seek to silence voices and perpetuate inequality. I channel my experiences and responses to current world events into my work, forcing viewers to question their beliefs and confront uncomfortable truths. Each piece is designed to provoke thought, challenge the status quo, and spark conversations about the things we often overlook or refuse to confront.</p>
+                    <br>
+                    <p>I believe in the power of art to disrupt and to inspire change. My pieces are not just visual expressions, but tools of resistance, urging viewers to reflect on their role in the world and how they can be part of the change they wish to see. Through my work, I hope to ignite a sense of accountability, empowering others to challenge authority and engage with the complexities of our time.</p>
+                    <br>
+                   <p>My journey as an artist is a commitment to using my voice, my art, and my perspective as a platform for dialogue and transformation. The rebellion within me is not just for the sake of defiance, but as a call for a better world—one that is more just, more inclusive, and more aware.</p>
             </div>
-            <div class="image-item">
-                <img class="gallery-image" src="P004_Davina.png" alt="Female form, cubism style" class="gallery-image" data-description="Description for Image 2" style="width: 200px; cursor: pointer;">
-                <p class="image-description">Cubism- Davina, Oil Painting, 16" x 20", 2024 </p>
-            </div>
-            <div class="image-item">
-                <img class="gallery-image" src="P005_Blood_Money.png" alt="watercolors of a dipiction of a handoff, Blood Money- New Yorker" class="gallery-image" data-description="Description for Image 2" style="width: 200px; cursor: pointer;">
-                <p class="image-description">Blood Money- New Yorker,Watercolors, 8" x 11", 2024</p>
-            </div>
-            <div class="image-item">
-                <img class="gallery-image" src="P006_Self_Portrait_mono.png" alt="monochromatic self portrait" class="gallery-image" data-description="Description for Image 2" style="width: 200px; cursor: pointer;">
-                <p class="image-description">Monochromatic- Self-Portrait, Oil Painting, 16" x 20", 2025</p>
-            </div>
-            <div class="image-item">
-                <img class="gallery-image" src="P007_Selt_Portrait-color.png" alt="Chromatic Self Portrait" class="gallery-image" data-description="Description for Image 3" style="width: 200px; cursor: pointer;">
-                <p class="image-description">Chromatic- Self-Portrait, Oil Painting, 16" x 20", 2025</p>
-            </div>
-            <div class="image-item">
-                <img class="gallery-image" src="P008_Monat_Horsewoman.png" alt="redition of Monat Horsewoman- 1882" class="gallery-image" data-description="Description for Image 3" style="width: 200px; cursor: pointer;">
-                <p class="image-description">Edouard Monat Horsewoman, Oil Painting, 16" x 20", 2024</p>
-            </div>
-            <!-- Add more images as needed -->
+
+
+
         </div>
     </div>
-    <div id="myModal" class="modal">
+    <br>
+    <br>
+    <div class="gallery">
+        <div class="image-grid">
+        <h2>Artist Bio</h2>
+            <div class="image-item">
+                <div class="text-main">
+                <p> Alina Vera is a first-generation Mexican American artist whose work focuses on social justice and political activism. After reconnecting with her creative practice in her 30s, she now works primarily in oil painting and sculpture to express emotions and comment on current events. Her recent installation, "Here, Our Democracy Stands," combines wood sculpture and performance, reflecting her commitment to powerful visual storytelling. 
+                    Inspired by artists like Ai Weiwei, Alina strives to use art as a platform for dialogue and change. She earned her bachelor’s in studio art from Eastern Washington University in 2025.</p>
+            
+</div>
+
+
+        </div>
+    </div>
+<br>
+<br>
+    <div class="gallery">
+        <div class="image-grid">
+        <h2>CV</h2>
+            <div class="image-item">
+                <p><a href="CV_AlinaCruz.pdf" download="Alina_Cruz_CV.pdf">Download CV</a></p>
+                <div class="text-main">
+                <h2>Alina Cruz</h2>
+                <p>alinacruz.studio.at.gmail.com</p>
+</div>
+<div class="text">
+<h3> EDUCATION</h3>
+<p>
+2025	BA, Bachelors of Studio Arts 
+Eastern Washington University, Cheney, WA   
+</p>
+
+<h3>EXHIBITIONS</h3>
+
+<p>2025	Symposium  
+ Eastern Washington University, Cheney, WA
+
+2025	An Experiment 
+ Eastern Washington University, Cheney, WA   
+   </p>
+
+<h3>PROFESSIONAL EXPERIENCE</h3>
+<p>
+2024	Design Office Assistant 
+	 Eastern Washington University, Spokane, WA   
+
+2023	Art Office Assistant 
+ Eastern Washington University, Cheney, WA   
+</p>
+
+
+<h3>EXPERIENCE </h3>	
+<p>
+2025 	Sculpture Methods: Wood 
+	Eastern Washington University, Cheney, WA   
+
+2025 	Souls Center: Figure Drawing
+	707 N. Cedar Suite #2, ​Spokane, WA 99201
+</p>
+</div>
+                
+            </div>
+        </div>
+    </div>
+
+     </div>
+    <!-- <div id="myModal" class="modal">
       <div class="modal-content">
           <span id="closeBtn" class="close">&times;</span>
     </div>
- </div>
+ </div> -->
 
     <!-- Modal for Image Viewing -->
-    <div id="imageModal" class="modal">
+    <!-- <div id="imageModal" class="modal">
         <span class="close">&times;</span>
         <div class="modal-content">
             <img id="modalImage" class="modal-image" src="" alt="Expanded View">
@@ -168,8 +212,8 @@
                 <button id="prevBtn" class="nav-btn">Prev</button>
                 <button id="nextBtn" class="nav-btn">Next</button>
             </div>
-        </div>
-    </div>
+        </div> -->
+   
  
     <script src="scripts.js"></script>
 </body>

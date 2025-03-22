@@ -9,14 +9,14 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   
-  <script src="script.js"></script>
+  
   <title>Alina Cruz Portfolio</title>
 </head>
 <body>
   <nav>
     <ul class="navbar" id="navbar">
-      <li><a href="#about.html"><p>Portfolio</p></a></li>
-      <li><a href="#contact.html"><p>Contact</p></a></li>
+      <li><a href="about.html"><p>Portfolio</p></a></li>
+      <li><a href="contact.html"><p>Contact</p></a></li>
     </ul>
   </nav>
 
@@ -39,6 +39,12 @@
               <a href="painting.html">Painting</a>
             </span>
            
+            <li class="submenu-item">
+              <span class="menu-title" onclick="toggleSubMenu('printmaking')">
+                <a href="printmaking.html">Printmaking</a>
+              </span>
+            </li>
+            
           </li>
           <li class="submenu-item">
             <span class="menu-title" onclick="toggleSubMenu('digital')">
@@ -69,9 +75,9 @@
                  </li>
          
   
-    <li class="menu-item">
+   <!--  <li class="menu-item">
         <span class="menu-title" onclick="toggleSubMenu('news')"><a href="https://example.com/project1" target="_blank">News</a></span>
-        <ul class="submenu" id="news"></ul>
+        <ul class="submenu" id="news"></ul> -->
           </li><!---hide later no news as of 3-18-25---->
    <li class="menu-item">
         <span class="menu-title" onclick="toggleSubMenu('about')"><a href="about.html" target="_blank">About</a></span>
@@ -102,7 +108,7 @@
       <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
       <a class="next" onclick="changeSlide(1)">&#10095;</a>
     </div>
-    <script src="script.js"></script>
+   
 </div>
   
 </div>
@@ -120,7 +126,7 @@
     
     <div class="center" id="footer"><section class="#link_up" >
        <a class="main-section" id="link_up">
-      <p>Contact</p>
+      <a href="contact.html"><p>Contact</p></a>
           </div>
      
       <brk></brk>
@@ -130,6 +136,7 @@
   </div>  
   
 </footer>
+ <script src="script.js"></script>
 </body>
 
 </html>

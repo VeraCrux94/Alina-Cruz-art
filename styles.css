@@ -1,0 +1,923 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box; /* Includes padding and border in element's total width/height */
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  /* overflow-x: hidden; Prevent horizontal scrolling */
+  width: 100%;
+  
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+
+
+.navbar {
+  display: fixed; 
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #ffffff;
+  position: fixed;
+  top: 0.1em; /* Adjust based on your header height */
+  left: 0;
+  width: 100%;
+  z-index: 0;
+  ;
+  /* padding-top: 1em;; */
+  /* box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); */
+  justify-content: space-around;
+ }
+
+.navbar.active {
+  display: flex; /* Show the navbar when active */
+}
+
+.navbar li {
+    margin: auto; 
+ }
+
+.navbar a {
+    color: #000000; 
+   
+    font-size: 1rem;
+    padding: 10px 20px;/* Text color 
+    transition: background-color 0.3s ease; 
+  
+  border-radius: 25px;  */
+  text-decoration: none;
+}
+
+.navbar a:hover {
+    /*ackground-color: #249E3B;
+    border-radius: 45px;*/
+  color: #BD3FF5;
+/*   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2); */
+
+
+      }
+
+
+
+
+.sidebar {
+  width: 250px;
+  position: fixed;
+  justify-content: flex-start;
+  top: 0.5rem;
+  left: 0;
+  height: 100%;
+  padding-top: 5.5rem; 
+  padding-left: 2rem;
+  color: #000000;
+ /* font-family: Arial, sans-serif;
+  list-style-type: none;*/
+  transform: translateX(-100%); /* Hide sidebar initially */
+  transition: transform 0.3s ease;
+  max-width: fit-content;
+ 
+   
+}
+
+.sidebar.open {
+  transform: translateX(0); /* Show sidebar when open */
+}
+
+.hamburger {
+  display: block; /* Show the hamburger button on smaller screens */
+  font-size: 30px;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1000; /* Ensure it stays above other elements */
+}
+
+     /*background-color: #f9f9f9; Add background color to sidebar */
+/*  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+   transform: translateX(-100%); Hide sidebar initially */
+/*   transition: transform 0.3s ease; Smooth transition */
+  
+/* 
+ul li ul.dropDown{
+  width:100%;
+  background: blue;
+  postion:absolute;
+  z-index:999;
+  display: none;
+}
+ul li:hover ul.dropDown{
+  display: block;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+      margin: 0;
+}
+ */
+
+
+.menu-item {
+  margin: 1rem 0;
+  list-style-type: none; 
+}
+
+.menu-title {
+  display: block;
+  padding: 0.5rem 0.5rem;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1.1rem;
+ 
+ }
+
+.menu-item li:hover {
+   color: #BD3FF5;
+}
+
+.submenu, .menu-title, .submenu-item {
+  font-family: "Jaini", system-ui;/**/
+font-size: 1.2em;
+font-style: normal;
+}
+
+.submenu {
+  display: none; /* Hide submenu by default */
+  /*list-style-type: none;*/
+  padding: 0;
+  margin: 0;
+  padding-left: 0.6rem;
+}
+
+.submenu.open {
+  display: block; /* Show submenu when 'open' class is added */
+}
+
+.submenu li {
+  list-style-type: none;
+  display: block;
+  padding: 0.3rem 0;
+   padding-left: 1.5rem;
+}
+
+.submenu li a {
+  text-decoration: none;
+  color: black;
+  max-width: fit-content;
+}
+
+.submenu li a:hover {
+  color: #BD3FF5;
+}
+
+
+/*
+.submenu li:hover {
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+}8?*/
+
+/* .submenu {
+  display: none; Hide submenu by default 
+}*/
+
+/*.submenu.active {
+  display: block;  Show submenu when active 
+}*/
+
+
+.menu-title a {
+text-decoration: none;
+color: #000000;
+}
+/* Remove underline and change color for News and About links */
+/*
+.menu-title a:hover {
+color: #BD3FF5;
+}
+  
+  .menu-item {
+list-style-type: none;
+}*/
+
+  /* .hamburger {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1;
+    display: block;
+      } */
+
+      .hamburger {
+        font-size: 30px;
+        cursor: pointer;
+        display: inline-block;
+        color: #333; /* Make sure the color contrasts well */
+        padding: 10px;
+      }
+
+  .submenu li {
+    font-size: 0.9rem;
+    padding: 6px 15px;
+}
+
+/*
+.hamburger {
+display: none;
+font-size: 30px;
+cursor: pointer;
+z-index: 1;
+}*/
+
+
+
+/*
+@media screen and (min-width: 769px) {
+  .sidebar {
+    width: 250px;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}   */
+
+.menu-title a:hover {
+color: #BD3FF5;
+}
+
+/*
+.hamburger {
+display: none;
+}*/
+
+
+
+.menu {  
+position: flex;
+}
+
+html, body {
+  height: 100%; /* Make sure the body takes up the full height of the viewport */
+  margin: 0;
+  display: block; /* <!---be sure not to mess withthis studd too much---> */
+  flex-direction: row;
+  align-items: center;
+}
+
+h2, p, h3{
+  text-align: center;
+  margin-top: 1.5rem; /* Add spacing from the top */  
+}
+
+.page-header {
+  padding-top: 1em;
+  margin-top: 0;
+}
+
+
+.hero {
+  position: relative;
+  display: flex;
+width: 100%;
+height: 75vh;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+min-width: 300px; /* Minimum width for mobile */
+max-width: 800px; /* Maximum width for desktop */
+padding: 5px;
+margin: 10px;
+margin-top: 60px; /* Add spacing from the top */
+box-sizing: border-box; 
+/*box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
+}
+
+
+/* .hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 35vh;
+  position: relative;
+  overflow: hidden;
+} */
+
+.slideshow-container {
+  position: relative;
+  width: 80%;
+  max-width: 800px; /* Adjust as needed */
+  height: auto;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slide {
+  display: flexbox; /* Hide all slides by default */
+  position: relative;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  padding-top: 1em;
+  object-fit: cover;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.caption {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.fade {
+  animation: fadeEffect 1.5s;
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+body {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-between;
+min-height: 100vh;
+margin: 0;
+padding-top: 2.5rem;
+z-index: 1;
+}
+
+h1, p, h2, h3 {
+  font-family: "Roboto Mono", monospace;
+font-optical-sizing: auto;
+font-weight: 400;
+font-style: normal;
+z-index: 1;
+}
+
+h1 {
+  font-size: 4rem;
+  color: #333;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #555;
+}
+
+
+/* .image-item {
+  display: flex;
+  flex-direction: column;  Stack image and description vertically 
+  align-items: center; Center align the content 
+  gap: 10px; Add spacing between image and description 
+  width: 100%;
+} */
+
+.image-item {
+ /* flex-basis: 60%;  Each image will take up 30% of the width, with space between 
+ flex: 1 1 60%; */
+ display: flex;
+  flex-direction: column; /* Ensure images and descriptions are stacked vertically */
+  align-items: center; /* Center the content */
+  gap: 10px; /* Space between image and description */
+  text-align: center; /* Center the description text */
+  box-sizing: border-box;
+}
+
+.image-item img {
+  width: 60%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.image-description {
+  display: block;   
+  justify-content: center;
+  text-align: center;
+
+  font-size: 0.85rem;
+  color: #555;
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: fit-content;
+  max-width: 149vh;
+  display: inline;
+  
+}
+
+iframe {
+  max-height: 100vh;
+  justify-content: center;
+  max-width: fit-content;
+  margin: 0;
+}
+
+
+
+/* .image-description {
+  text-align: center;  Center align the text 
+  font-size: 0.85rem;
+  color: #555;
+  margin-top: 8px;
+} */
+
+/* .image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  
+  max-height: auto;  
+  margin: 0 auto; 
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  max-width: 100%;
+  background: #ffffff;
+} */
+
+.image-grid {
+  position: top; 
+  display: block;
+  text-align: center;
+  flex-wrap: wrap; /* Allows images to wrap onto the next row */
+  justify-content: center;
+  gap: 20px; /* Adds space between images */
+ 
+}
+
+.gallery-image {
+  width: 200px; /* Set a consistent width */
+  height: 200px; /* Set a consistent height */
+  object-fit: cover; /* Ensure the image scales properly without distortion */
+  cursor: pointer;
+  transition: transform 0.3s ease; /* Smooth scaling on hover */
+  padding-top: 1em;
+  margin-top: 1em;
+}
+
+.gallery-image:hover {
+  transform: scale(1.75); /* Ensure hover effect works */
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  /*background-color: rgba(0, 0, 0, 0.8);*/
+ /* align-items: center;
+  justify-content: center;
+  flex-direction: column;*/
+}
+
+/* .modal-content {
+   background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+} */
+
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 8px;
+}
+
+/* Close button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-image {
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.modal-description {
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+  margin-top: 15px;
+}
+
+.modal-nav {
+  margin-top: 20px;
+}
+
+.nav-btn {
+  
+  margin: 0 10px;
+  padding: 10px 20px;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+border-radius: 15px;
+}
+
+.nav-btn:hover {
+  background-color: #ddd;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.gallery-view-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+border-radius: 15px;
+}
+
+.gallery-view-btn:hover {
+  background-color: #ddd;
+}
+
+.sidebar.active {
+  left: 0; /* or whatever you use to position the sidebar */
+}
+
+@media (min-width: 768px) {
+  .image-item {
+      display: block;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+  }
+
+  .image-description {
+    display: block;
+      text-align: center;
+      font-size: 14px;
+      /* margin-left: 20px; */
+      }
+
+  .image-item img {
+      width: 60%;/*dud sine here*/
+      max-width: 35vh; /* Set a max width for larger screens */
+  }
+}
+
+
+
+/* Centered container */
+.container {
+  display: block;
+  text-align: center;
+  width: 100%;
+  height: auto; /* Allow the container to adjust to its content */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 300px; /* Minimum width for mobile */
+  max-width: 800px; /* Maximum width for desktop */
+  padding: 5px;
+  margin: 0;
+  padding-top: 0.5em;
+  margin-top: 0.15em; /* Add spacing from the top */
+  padding-bottom: 5em; /* Add extra padding at the bottom to avoid overlap */
+  background: #ffffff;
+  text-align: center;
+}
+
+ /*.text {
+  margin-top: 1em; /* Add spacing from the top 
+  font-size: 0.75rem;
+  color: #555;
+  text-align: left; 
+}*/
+
+.text {
+  max-width: 25rem;
+  margin: 0 auto; 
+  padding: 0 1rem;
+  padding-bottom: 2em;
+}
+
+.text-main, .text {
+  margin-top: 1em; /* Add spacing from the top */
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.3;
+ /*  line-width: 1.5; */
+  text-align: center;
+  max-width: 40rem;;
+  line-break: auto;
+  text-indent: 2.5em;
+  text-align: left;
+  
+}
+
+
+.footer-socials {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  gap: 20px; 
+  padding: 1rem 0;
+}
+
+.social-icon {
+  font-size: 2.5rem;
+  color: #227ab4; 
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.5);
+  color: #42FFE8; 
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .footer-socials {
+      gap: 15px;
+  }
+
+  .social-icon {
+      font-size: 1.5rem; 
+  }
+}
+
+/*below josh css code*/
+*, *::before, *::after {
+box-sizing: border-box;
+}
+
+/* .container {
+  display: flex;
+  width: 100%;
+  padding: 20px;
+} */
+
+/* Centered footer fix thiss footer issue place bottom  */
+footer {
+  position: relative; /* Change from fixed to relative */
+  bottom: 0;
+  width: 100%; /* Ensure the footer spans the full width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: #f1f1f1;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer .left, footer .right, footer .center {
+display: flex;
+align-items: center;
+
+}
+
+footer .left a, footer .right a, footer .center a {
+color: #cfcafc;
+text-decoration: none;
+margin: 0 10px;
+}
+
+footer .left a:hover, footer .right a:hover, footer .center a:hover {
+color: #000000;
+}
+
+/* footer .left {
+justify-content: flex-start;
+} */
+
+footer .center {
+justify-content: flex-start;
+text-align: left;
+line-height: 1px;
+}
+
+footer .right {
+justify-content: flex-end;
+text-align: right;
+}
+
+/*dont TOUchhhh*/
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; 
+        align-items: center; 
+       display: fixed;
+    }
+
+    .navbar li {
+        margin: 0.25em 0;
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 0;
+        transition: 0.3s;
+  }
+
+  .sidebar.open {
+    width: 250px;
+  }
+
+  .submenu {
+    display: none;
+  }
+
+  .menu-title {
+    font-size: 1rem;
+    padding: 8px 10px;
+      list-style-type: none;
+  }
+}
+  
+
+@media (max-width: 768px) {
+.hamburger {
+  display: block;
+}
+
+.sidebar {
+  width: 250px;
+  transform: translateX(0); /* Hide sidebar initially */
+}
+}
+/* .sidebar.open {
+  width: 250px;
+  transform: translateX(0);
+} 
+}
+
+/* Corrected comment: Show sidebar when open 
+}*/
+
+@media screen and (min-width: 769px) {
+.sidebar {
+  width: 55vh;
+  transform: translateX(0); 
+  position: absolute;
+}
+
+.hamburger {
+  display: none;
+}
+}
+
+@media (min-width: 1024px) {
+  .image-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on large screens */
+  }
+}
+
+/* Medium Screens (Tablets) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .image-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+  }
+}
+
+/* Small Screens (Mobile) */
+@media (max-width: 768px) {
+  .image-grid {
+    grid-template-columns: 1fr; 
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    box-shadow: none;
+    list-style-type: none;
+  }
+
+  .hamburger {
+    display: none; 
+  }
+}
+
+.back-to-top {
+  position: fixed;
+   bottom: 3rem;
+  right: 2.5rem;
+  padding: 10px 15px;
+  font-size: 14px;
+  background-color: #3b3b3b;
+  color: whitesmoke;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  /*display: none;  Initially hidden */
+  z-index: 1000;
+}
+
+.back-to-top:hover, .link:hover {
+  background-color: #f7f2f2;
+  color: #000000;
+}
+
+.link {
+  background-color: #f7f2f2;
+  color: #000000;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  padding: 10px 15px;
+  font-size: 14px;
+  display: inline-block;
+  
+}
+.link:hover {
+  background-color:#3b3b3b ;
+  color: whitesmoke;
+}
+
+
+iframe {
+  max-height: 100vh;
+  justify-content: center;
+}
